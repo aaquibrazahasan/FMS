@@ -198,14 +198,10 @@ function onEdit(e) {
   var range= sheet.getActiveCell();
   var row = range.getRow();
   var col = range.getColumn();
-  
- 
 
 if(col ===8 && row > 2  && e.source.getActiveSheet().getName()==="8th Sept - Guest Check-out" ){
  
  e.source.getActiveSheet().getRange(row,9).setValue(new Date()); } 
-
-
 
 
 }
