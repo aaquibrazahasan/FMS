@@ -189,3 +189,24 @@ function setCF(planned) {
 };
 
 
+// This function is used to create a Timestamp based on column-specific changes  
+
+function onEdit(e) {
+  
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+ 
+  var range= sheet.getActiveCell();
+  var row = range.getRow();
+  var col = range.getColumn();
+  
+ 
+
+if(col ===8 && row > 2  && e.source.getActiveSheet().getName()==="8th Sept - Guest Check-out" ){
+ 
+ e.source.getActiveSheet().getRange(row,9).setValue(new Date()); } 
+
+
+
+
+}
+
